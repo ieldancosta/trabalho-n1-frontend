@@ -1,0 +1,112 @@
+body {
+    background-color: #f7f0e6;
+    opacity: 0.8;
+    background-image:  radial-gradient(#f79245 0.5px, transparent 0.5px), radial-gradient(#f79245 0.5px, #f7f0e6 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Isso faz o main esticar para preencher o vazio */
+}
+
+h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: orange;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+h2 {
+    padding-left: 5px;
+}
+
+
+/* ------------------------------------------------- */
+
+
+#navigation-top {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#games-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards passem para a linha de baixo*/ /* Se não couber, pula para baixo */
+    gap: 20px; /* Cria um espaço igual entre os cards */
+    justify-content: center; /* Organiza os cards (o conteúdo) na tela, nesse caso: centro */
+    width: 100%; /* Definimos para ocupar a largura disponível*/
+    
+    margin-top: 10px; /* Adiciona 10 de margem acima */
+    margin-bottom: 10px; /*  Adiciona 10 de margem abaixo */
+}
+
+.card-game {
+    background-color: white; /* Fundo branco para destacar do bege */
+    border: 2px solid orange; /* Borda com a cor laranja */
+    border-radius: 6px; /* Cantos arredondados */
+    padding: 110px 50px; /* Espaço interno para dar corpo ao card */
+    width: 200px; /* Largura fixa de 180px para todos ficarem iguais*/
+    font-size: 16px; /* Aumentando o tamanho da fonte */
+    font-weight: bold;
+    color: black; /* Definindo a cor da fonte/texto para preto */
+    cursor: pointer; /* Ao passar o mouse em cima, ele muda para o modelo: Pointer (Apontar) */
+    transition: all 0.3s ease; /* Suaviza as animações */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */ /* Aceita 4 valores: deslocamento horizontal, vertical, nível de desfoque, cor */
+    
+}
+
+/* Ao passar o mouse em cima */
+.card-game:hover {
+    background-color: orange; /* Inverte a cor */
+    color: white; /* Definindo a cor da fonte/texto para branco */
+    transform: translateY(-5px); /* O card sobe levemente */
+    box-shadow: 0 8px 15px rgba(247, 146, 69, 0.3); /* Sombra mais forte */
+}
+
+/* Ao clicar em cima */
+.card-game:active {
+    transform: scale(0.95); /* Reduz o tamanho para 95% (efeito de mola) */
+    background-color: rgb(240, 157, 2); /* Define a cor do fundo para um laranja mais escuro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor e mais próxima */
+    transition: transform 0.1s; /* Transição ultra rápida para o clique parecer instantâneo */
+}
+
+.card-img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: 100px; /* Altura fixa paa todos os cards ficarem iguais */
+    border-radius: 8px;
+}
+
+.card-img-specific {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: 100px; /* Altura fixa paa todos os cards ficarem iguais */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-text {
+    width: 100%;
+}
+
+.article-text {
+    padding-left: 10px;
+}
+
+
+
